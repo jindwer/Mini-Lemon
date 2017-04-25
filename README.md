@@ -87,7 +87,7 @@
 |------|------|------|-------|------|------|
 | 记录ID | _id | ObjectId | 是 |  | 数据库自动生成 | 
 | 父标签 | ptag | String | 是 |  |  |
-| 子标签 | ctag | Object | 是 | {} | 如{'php':3,'css':2,'java':10} |
+| 子标签 | ctag | Object | 是 | {} | {'php':{focus:33,des:"werfsf"}} |
 
 ***
 ## Pages(页面)
