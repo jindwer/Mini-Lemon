@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/index.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_mvwktzos7lrqkt9.css" media="screen" title="no title" charset="utf-8">
+  <title>Mini Lemon</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+    <!--　左边　-->
+        <div class="left-box col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            <ul class="tabs clearfix">
+              <li class="active"><a href="#">最新动态</a></li>
+              <li><a href="#">最新问答</a></li>
+              <li><a href="#">热门问答</a></li>
+              <li><a href="#">等待回答</a></li>
+            </ul>
+            <div class="question-list">
+              <section class="question-item clearfix row">
+                <div class="item-left text-center col-lg-3 col-md-3 col-sm-3 col-xs-2">
+                  <div class="votes hidden-xs">10<small>得票</small></div>
+                  <div class="answers">15<small>回答</small></div>
+                  <div class="big-num scans hidden-xs">20<small>浏览</small></div>
+                </div>
+                <div class="item-right col-lg-9 col-md-9 col-sm-9 col-xs-10">
+                  <div class="author">
+                    <span><a href="#">小胖子</a></span>
+                    <span class="sep"></span>
+                    <span>10分钟前提问</span>
+                  </div>
+                  <h2 class="title"><a href="#">无法执行该操作，因为链接服务器 "***" 的 OLE DB 访问接口 "SQLNCLI" 无法启动分布式事务。解决方法？</a></h2>
+                  <ul class="taglist">
+                    <li><a href="#">php</a></li>
+                    <li><a href="#">javascript</a></li>
+                    <li><a href="#">css</a></li>
+                    <li><a href="#">nodejs</a></li>
+                  </ul>
+                </div>
+              </section>
+              <section class="question-item clearfix row">
+                <div class="item-left text-center col-lg-3 col-md-3 col-sm-3 col-xs-2">
+                  <div class="votes hidden-xs">10<small>得票</small></div>
+                  <div class="noanswers">0<small>回答</small></div>
+                  <div class="scans hidden-xs">20<small>浏览</small></div>
+                </div>
+                <div class="item-right col-lg-9 col-md-9 col-sm-9 col-xs-10">
+                  <div class="author">
+                    <span><a href="#">小胖子</a></span>
+                    <span class="sep"></span>
+                    <span>10分钟前提问</span>
+                  </div>
+                  <h2 class="title"><a href="#">无法执行该操作，因为链接服务器 "***" 的 OLE DB 访问接口 "SQLNCLI" 无法启动分布式事务。解决方法？</a></h2>
+                  <ul class="taglist">
+                    <li><a href="#">php</a></li>
+                    <li><a href="#">javascript</a></li>
+                    <li><a href="#">css</a></li>
+                    <li><a href="#">nodejs</a></li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+            <div class="row text-center">
+              <nav class="page">
+                <ul class="pager">
+                  <li>
+                    <a href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li>
+                    <a href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+        </div>
+        <!-- 右边　-->
+        <div class="right-box col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <!--　未登录 去注册　-->
+            <div class="to-sign" style="display:none;">
+              <h3 class="text-center">Mini Lemon</h3>
+              <h4 class="text-center">一个让你乐于分享的社区</h4>
+              <form class="" action="index.html" method="post">
+                <div class="input-group" style="margint-top:10px;">
+                  <span class="input-group-addon"><i class="iconfont icon-user"></i></span>
+                  <input type="text" name="" class="form-control" placeholder="真实姓名或者常用昵称">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="iconfont icon-shoujihao"></i></span>
+                  <input type="phone" name="" class="form-control" placeholder="请输入电话号码">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="iconfont icon-yanzhengma"></i></span>
+                    <input type="text" name="" class="form-control" placeholder="验证码">
+                    <a class="btn btn-default input-group-addon" role="button">发送验证码</a>
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="iconfont icon-password"></i></span>
+                  <input type="password" name="" class="form-control" placeholder="请输入密码" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group text-center" style="width:100%;">
+                  <button class="btn sub-btn" type="submit">注册</button>
+                  <small>已有账号?去<a href="">登录</a></small>
+                </div>
+              </form>
+            </div>
+            <!--　登录　任务栏　-->
+            <div class="task panel">
+              <div class="panel-heading text-center">新手任务</div>
+              <div class="panel-body">
+                <ul class="list-group">
+                  <li class="list-group-item"><i class="done glyphicon glyphicon-check"></i><span>Cras justo odio</span></li>
+                  <li class="list-group-item"><i class="glyphicon glyphicon-check"></i><span>Cras justo odio</span></li>
+                  <li class="list-group-item"><i class="glyphicon glyphicon-check"></i><span>Cras justo odio</span></li>
+                  <li class="list-group-item"><i class="glyphicon glyphicon-check"></i><span>Cras justo odio</span></li>
+                  <li class="list-group-item"><i class="glyphicon glyphicon-check"></i><span>Cras justo odio</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rank">
+              <div class="panel-heading">
+                <span>排行榜</span>
+              </div>
+              <div class="panel-body">
+                <ul class="list-group">
+                  <li class="list-group-item"><i>1.</i><a href="#">Cras</a><span class="pull-right">1232</span></li>
+                  <li class="list-group-item"><i>2.</i><a href="#">Cras</a><span class="pull-right">1232</span></li>
+                  <li class="list-group-item"><i>3.</i><a href="#">Cras</a><span class="pull-right">1232</span></li>
+                  <li class="list-group-item"><i>4.</i><a href="#">Cras</a><span class="pull-right">1232</span></li>
+                  <li class="list-group-item"><i>5.</i><a href="#">Cras</a><span class="pull-right">1232</span></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="to-top hidden-sm">回到顶部</div>
+<script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+<script src="/js/index.js"></script>  
+</body>
+</html>

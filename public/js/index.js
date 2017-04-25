@@ -1,0 +1,14 @@
+(function($){
+    $(function(){
+      $(window).scroll(function(){
+        if($(this).scrollTop()>150){
+          $('.to-top').fadeIn();
+        }else{
+          $('.to-top').fadeOut();
+        }
+      });
+      $('.to-top').click(function(){
+        $(window).scrollTop(0);
+      });
+    });
+})(jQuery);

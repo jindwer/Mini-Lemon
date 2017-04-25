@@ -1,0 +1,260 @@
+.left-box,.right-box{
+  padding:0;
+}
+.tabs{
+  padding:0px;
+  padding-top:20px;
+  border-bottom: 1px solid #ddd;
+  list-style: none;
+}
+.tabs li{
+  float: left;
+  padding:0 23px 12px 23px;
+  margin-left:30px;
+  border-bottom:3px solid transparent;
+  cursor: pointer;
+}
+.tabs li:hover{
+  border-color:#4BB45B;
+}
+.tabs li:first-child{
+  margin-left:0;
+}
+.tabs li a{
+  text-decoration: none;
+  font-size:1em;
+  color:#333;
+  font-weight:700;
+}
+.tabs li.active{
+  border-color:#4BB45B;
+  cursor: auto;
+}
+.question-item{
+  margin:0;
+  padding-top:8px;
+  padding-bottom:8px;
+  border-bottom:1px solid #ddd;
+}
+.question-item a{
+  text-decoration: none;
+  cursor: pointer;
+  color:#333;
+}
+.question-item a:hover{
+  text-decoration: underline;
+}
+.item-left{
+  padding:0;
+}
+.item-left>div{
+  width:45px;
+  height:45px;
+  display: inline-block;
+  padding-top:2px;
+  font-size:1.1em;
+  border-radius:10px;
+}
+.item-left>div small{
+  display: block;
+}
+.answers{
+  margin-left:5px;
+  margin-right:5px;
+  background:#4BB45B;
+  color:#fff;
+}
+.noanswers{
+  margin-left:5px;
+  margin-right:5px;
+  background:#E5B633;
+  color:#fff;
+}
+.big-num{
+  color:#D45649;
+}
+.item-right{
+  padding:0;
+  padding-right:12px;
+}
+.author span{
+  display: inline-block;
+  color:#333;
+  margin-bottom:8px;
+}
+.author .sep{
+  width:2px;
+  height:2px;
+  background:#333;
+  border-radius: 50%;
+  margin-bottom:4px;
+}
+.title{
+  display: inline;
+  font-size:1.2em;
+}
+@media screen and (max-width:768px) {
+  .title{
+    font-size:1em;
+  }
+}
+.title a:hover{
+  color:#4BB45B;
+}
+.taglist{
+  padding:0;
+  display:inline-block;
+}
+.taglist li{
+  list-style: none;
+  display: inline-block;
+}
+.taglist li a{
+  display: block;
+  padding:2px 7px;
+  background:#EBF5F3;
+  color:#4BB45B;
+  border-radius:5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.taglist li a:hover{
+  background:#4BB45B;
+  color:#fff;
+  text-decoration: none;
+}
+.to-sign{
+  margin-top:20px;
+  margin-left:15px;
+  padding:20px 10px;
+  background:#fcf8e3;
+  border-radius:5px;
+  color:#8a6d3b;
+}
+.to-sign h3{
+  font-size:1.4em;
+  margin:0;
+}
+.to-sign h4{
+  font-size:1.2em;
+}
+.to-sign .input-group{
+  margin-bottom:10px;
+  border-color:#9DEC44;
+}
+.to-sign .input-group-addon i{
+  color:#4BB45B
+}
+.to-sign input:focus{
+  box-shadow: 0 0 8px #4BB45B;
+  border-color:#9DEC44;
+}
+.sub-btn{
+  background:#4BB45B;
+  width:100%;
+  color:#fff;
+  font-size:1.2em;
+  outline: none;
+  font-weight: bold;
+  margin-bottom:10px;
+}
+.sub-btn:hover{
+  color:#fff;
+  background:#9DEC44;
+}
+.sub-btn:active{
+  outline: none;
+}
+.task{
+  margin-top:20px;
+  margin-left:15px;
+  margin-bottom:30px;
+  border:1px solid #4BB45B;
+}
+.task .panel-heading{
+  background:#4BB45B;
+  color:#fff;
+  font-size:1.2em;
+  font-weight:bold;
+}
+.task ul{
+  margin:0 20px 10px 30px;
+}
+.task ul li{
+  border:0;
+  border-radius: 0;
+  border-bottom: 1px solid #8a6d3b;
+  background:0;
+  font-weight: bold;
+}
+.task ul li:last-child{
+  border-radius: 0;
+}
+.task ul li i{
+  display: inline-block;
+  font-size:1.2em;
+  margin-left:-35px;
+  margin-right:20px;
+  margin-top:5px;
+  visibility: hidden;
+}
+.task ul li i.done{
+  visibility: visible;
+  color:#4BB45B;
+}
+.task ul li i.done + span{
+  color:#4BB45B;
+}
+.rank .panel-heading{
+  border-top:2px solid #ddd;
+  font-size:1.4em;
+  padding-bottom:0;
+  padding-top:30px;
+}
+.rank .panel-body{
+  margin-top:0;
+  padding-right:0px;
+}
+.rank ul li{
+  border:0;
+}
+.rank ul li i{
+  display: inline-block;
+  margin-right:5px;
+}
+.rank ul li a{
+  color:#4BB45B;
+  cursor: pointer;
+}
+.page li a{
+  color:#4BB45B;
+  border-color:#4BB45B;
+}
+.page li a:hover{
+  background:#4BB45B;
+  color:#fff;
+}
+.page li.active a{
+  background:#4BB45B;
+  color:#fff;
+}
+.to-top{
+  position: fixed;
+  color:#4BB45B;
+  background:#fff;
+  right:10px;
+  bottom:200px;
+  font-weight: bold;
+  width:40px;
+  font-size:1.1em;
+  word-break: break-all;
+  border:1px solid #4BB45B;
+  border-radius: 5px;
+  padding:10px;
+  cursor: pointer;
+  display: none;
+}
+.to-top:hover{
+  background:#4BB45B;
+  color:#fff;
+}
