@@ -22,6 +22,7 @@
 | 被点赞数 | likes | Number | 否 | 0 |  |
 | 被关注数 | focus | Number | 否 | 0 |  | 
 | 关注列表 | focuslist | Array | 否 | [] | 关注用户的_id |
+| 关注的标签 | tagfocuslist | Array | 否 | [] | ['php'] |
 | 活跃度数 | actives | Number | 否 | 0 |  |
 | 被举报次数 | bads | Number | 否 | 0 |  |
 | 关注的问题 | issuesf | Array | 否 | [] | 问题的_id | 
