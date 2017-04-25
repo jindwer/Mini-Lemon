@@ -45,8 +45,7 @@
 | 问题标签 | tags | Array | 是 | [] |  |
 | 发布人 | puber | Array | 是 | [] | 存入发布人_id nick |
 | 发布时间 | ctime | Date | 是 |  |  |
-| 最近回答用户 | ansuser | Array | 否 | [] | 最近回答用户_id nick |
-| 最近回答时间 | anstime | Date | 是 |  | 最近的回答时间 |
+| 最近回答用户 | ansuser | Array | 否 | [] | 最近回答用户_id nick time |
 | 最近操作时间 | ltime | Date | 是 |  | 最近的操作时间 |
 | 投票数 | votes | Number | 否 | 0 |  |
 | 回答数 | answers | Number | 否 | 0 |  |
