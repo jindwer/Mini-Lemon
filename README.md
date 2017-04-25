@@ -17,6 +17,7 @@
 |------|------|------|-------|------|------|
 | 记录ID | _id | ObjectId | 是 |  | 数据库自动生成 | 
 | 账号 | uid | String | 是 |  | 唯一，邮箱或者手机号 |
+| 昵称 | nick | String | 是 |  |  |
 | 密码 | password | String | 是 |  |  | 
 | 被点赞数 | likes | Number | 否 | 0 |  |
 | 被关注数 | focus | Number | 否 | 0 |  | 
