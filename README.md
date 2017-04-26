@@ -7,10 +7,10 @@
 * 数据库: mongodb
 
 ## Database(数据库)
-> base
+> lemon
 
 ## Collections(集合)
-###  base
+###  lemon
 >* users(用户)
 
 | 中文 | 英文 | 类型 | 是否必填 | 默认值 | 备注 | 
@@ -22,6 +22,7 @@
 | 被点赞数 | likes | Number | 否 | 0 |  |
 | 被关注数 | focus | Number | 否 | 0 |  | 
 | 关注列表 | focuslist | Array | 否 | [] | 关注用户的_id |
+| 关注的标签 | tagfocuslist | Array | 否 | [] | ['php'] |
 | 活跃度数 | actives | Number | 否 | 0 |  |
 | 被举报次数 | bads | Number | 否 | 0 |  |
 | 关注的问题 | issuesf | Array | 否 | [] | 问题的_id | 
@@ -80,6 +81,14 @@
 | 评论人 | comuser | Array | 是 | [] | _id nick |
 | 评论内容 | content | String | 是 |  |  |
 | 评论的时间 | ctime | Date | 是 |  |  |
+
+>* tags(标签)
+
+| 中文 | 英文 | 类型 | 是否必填 | 默认值 | 备注 | 
+|------|------|------|-------|------|------|
+| 记录ID | _id | ObjectId | 是 |  | 数据库自动生成 | 
+| 父标签 | ptag | String | 是 |  |  |
+| 子标签 | ctag | Object | 是 | {} | {'php':{focus:33,des:"werfsf"}} |
 
 ***
 ## Pages(页面)
