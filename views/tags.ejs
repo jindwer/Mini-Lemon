@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>标签树</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/tags.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="h3 mt30">标签</h1><br>
+      <p>标签不仅能组织和归类你的内容，还能关联相似的内容。正确使用标签讲让你的问题被更多人发现和解决。</p>
+      <!--<div id="bin" class="flex">
+        <input class="form-control input-sm mr5" type="text" name="tags" placeholder="添加关注的标签">
+        <button class="btn btn-sm btn-default ml5">加关注</button>
+        <span id="text" style="color:#999;vertical-align:middle;display:inline-block">（左右拖动进行导航标签排序，取消关注即可移除）</span>
+      </div><br>-->
+
+      <h2 class="h4 mt30">常用标签&nbsp;
+        <small class="ml5">
+          <a href="#">全部</a>
+        </small>
+      </h2>
+
+      <div id="ab" class="row">
+        <% tags.forEach(function(cur){ %>
+        <div class="col-md-3">
+            <div class="tag-list_itemWraper">
+              <h3 class="h5 tag-list_itemheader"><%= cur.ptag %></h3>
+              <ul class="list-inline">
+                <% for(var i in cur.ctag){ %>
+                   <li class="tagPopup"><a href="/t/<%= i %>" class="tag"><%= i %></a></li>
+                <% } %>
+              </ul>
+            </div>
+        </div>
+        <% }) %>
+      </div>
+      <h2 class="h4 mt30">社区子站</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="media border">
+            <a href="#" class="pull-left"><img class="media-object" width="40" height="40" src="https://sfault-avatar.b0.upaiyun.com/393/562/3935623170-1140000000142909_big64" alt="101 新手上路"></a>
+            <div class="media-body">
+              <h3 class="h5 media-heading">
+                <a href="#">101 新手上路</a>
+              </h3>
+              <p class="text-muted mb0">面向新手开发者的问题集中营</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="media border">
+            <a class="pull-left" href="/mongodb"><img class="media-object" width="40" height="40" src="https://sfault-avatar.b0.upaiyun.com/175/275/1752754410-1140000000601658_big64" alt="MongoDB 技术问答"></a>            <div class="media-body">
+              <h3 class="h5 media-heading">
+                <a href="#">MongoDB 技术问答</a>
+              </h3>
+              <p class="text-muted mb0">社区力量为主，同时有MongoDB官方技术人员支持的旨在推广MongoDB的普及和最佳使用方案的社区。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="media border">
+            <a href="#" class="pull-left"><img class="media-object" width="40" height="40" src="https://sfault-avatar.b0.upaiyun.com/184/920/1849201525-1140000000137458_big64" alt="七牛云存储问答"></a>
+            <div class="media-body">
+              <h3 class="h5 media-heading">
+                <a href="#">七牛云存储问答</a>
+              </h3>
+              <p class="text-muted mb0">非结构化静态文件的高速稳定安全云存储平台</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="media border">
+            <a href="#" class="pull-left"><img class="media-object" width="40" height="40" src="https://sfault-avatar.b0.upaiyun.com/196/388/1963885910-54af96065b546_big64" alt="开源硬件与嵌入式问答"></a>
+            <div class="media-body">
+              <h3 class="h5 media-heading">
+                <a href="#">开源硬件与嵌入式问答</a>
+              </h3>
+              <p class="text-muted mb0">树莓派、Arduino与其他开源硬件开发问答</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="media border">
+            <a href="#" class="pull-left"><img class="media-object" width="40" height="40" src="https://sfault-avatar.b0.upaiyun.com/406/514/4065140650-1140000000145939_big64" alt="社区建设"></a>
+            <div class="media-body">
+              <h3 class="h5 media-heading">
+                <a href="#">社区建设</a>
+              </h3>
+              <p class="text-muted mb0">SegmentFault 社区建设建议反馈讨论</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="media border">
+            <a href="#" class="pull-left"><img class="media-object" width="40" height="40" src="https://sfault-avatar.b0.upaiyun.com/168/993/1689930444-1140000000363864_big64" alt="LeanCloud 问答"></a>
+            <div class="media-body">
+              <h3 class="h5 media-heading">
+                <a href="#">LeanCloud 问答</a>
+              </h3>
+              <p class="text-muted mb0">移动应用开发提供一站式解决方案</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="media border">
+            <a href="#" class="pull-left"><img class="media-object" width="40" height="40" src="https://sfault-avatar.b0.upaiyun.com/272/424/2724247736-58db1f05475f4_big64" alt="UPYUN 问答"></a>
+            <div class="media-body">
+              <h3 class="h5 media-heading">
+                <a href="#">UPYUN 问答</a>
+              </h3>
+              <p class="text-muted mb0">非结构化数据云存储、云处理、云分发平台</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="media border">
+            <a href="#" class="pull-left"><img class="media-object" width="40" height="40" src="https://sfault-avatar.b0.upaiyun.com/604/519/6045191-1140000000383699_big64" alt="Docker 技术问答"></a>
+            <div class="media-body">
+              <h3 class="h5 media-heading">
+                <a href="#">Docker 技术问答</a>
+              </h3>
+              <p class="text-muted mb0">Docker 技术问答</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="media border">
+            <a href="#" class="pull-left"><img class="media-object" width="40" height="40" src="https://sfault-avatar.b0.upaiyun.com/326/706/3267068047-56fb617a8ec42_big64" alt="UCloud开发者问答"></a>
+            <div class="media-body">
+              <h3 class="h5 media-heading">
+                <a href="#">UCloud开发者问答</a>
+              </h3>
+              <p class="text-muted mb0">UCloud开发者问答</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="media border">
+            <a href="#" class="pull-left"><img class="media-object" width="40" height="40" src="https://sfault-avatar.b0.upaiyun.com/381/900/3819000678-54f562c2c95a7_big64" alt="Amaze UI 官方社区"></a>
+            <div class="media-body">
+              <h3 class="h5 media-heading">
+                <a href="#">Amaze UI 官方社区</a>
+              </h3>
+              <p class="text-muted mb0">Amaze UI 社区技术问答平台</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="media border">
+            <a href="#" class="pull-left"><img class="media-object" width="40" height="40" src="https://sfault-avatar.b0.upaiyun.com/326/148/3261487364-573196b84a2a8_big64" alt="Agora.io 问答社区"></a>
+            <div class="media-body">
+              <h3 class="h5 media-heading">
+                <a href="#">Agora.io 问答社区</a>
+              </h3>
+              <p class="text-muted mb0">声网 Agora.io 实时云开发问答社区</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="media border">
+            <a href="#" class="pull-left"><img class="media-object" width="40" height="40" src="https://sfault-avatar.b0.upaiyun.com/287/570/2875704635-1140000000145753_big64" alt="微信开放平台问答"></a>
+            <div class="media-body">
+              <h3 class="h5 media-heading">
+                <a href="#">微信开放平台问答</a>
+              </h3>
+              <p class="text-muted mb0">SegmentFault 微信开放平台 问答专区</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="media border">
+            <a href="#" class="pull-left"><img class="media-object" width="40" height="40" src="https://sfault-avatar.b0.upaiyun.com/291/241/2912414694-5497d778695a2_big64" alt="SequoiaDB 技术问答"></a>
+            <div class="media-body">
+              <h3 class="h5 media-heading">
+                <a href="#">SequoiaDB 技术问答</a>
+              </h3>
+              <p class="text-muted mb0">SequoiaDB联合SegmentFault 共同推出技术问答专区，在这里你将得到来自官方技术人员的帮助，并和像你一样的技术人员交流。一起把SequoiaDB做的更大更强！</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

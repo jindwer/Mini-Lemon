@@ -1,0 +1,326 @@
+#navbar {
+            background: white;
+            height: 60px;
+            margin-bottom: 0px;
+            border: none;
+        }
+
+        .container-fluid {
+            position: relative;
+            top: 6px;
+        }
+
+        .collapse {
+            position: relative;
+        }
+
+        #navbar-form {
+            float: left !important;
+            position: absolute;
+            right: 150px;
+        }
+
+        .nav {
+            font-size: 16px !important;
+        }
+
+        .navbar-toggle {
+            float: left;
+            margin-left: 15px;
+        }
+
+        .biaoqian-daohang-kuang {
+            width: 100%;
+            height: 42px;
+            background-color: #5FA70F;
+        }
+
+        .biaoqian-daohang {
+            position: relative;
+            width: 100%;
+            margin: auto;
+            display: flex;
+        }
+
+        .glyphicon-pencil {
+            display: none;
+            float: right;
+            margin-right: 12px;
+            margin-top: 15px;
+            font-size: 20px;
+            color: #5FA70F;
+        }
+
+        .glyphicon-pencil:hover {
+            text-decoration: none;
+            color: green;
+        }
+
+        .denglu {
+            display: none;
+            float: right;
+            margin-right: 12px;
+            margin-top: 15px;
+            font-size: 18px;
+            color: #5FA70F;
+        }
+
+        .denglu:hover {
+            text-decoration: none;
+            color: green;
+        }
+
+        .navbar-nav {
+            margin-top: 3px;
+        }
+
+        .top-daohang {
+            position: relative;
+        }
+        .top-daohang>ul>li {
+            position: relative;
+        }
+
+        .top-daohang>ul>li>a {
+            background-color: white;
+            height: 40px;
+            margin-top: 1px;
+            line-height: 16px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .navbar-nav>li>a:hover {
+            background-color: #5FA70F !important;
+            border-radius: 5px;
+        }
+
+        .denglu-a {
+            background-color: #5FA70F !important;
+            color: white !important;
+            border-radius: 5px;
+        }
+
+        .daohang1>li>a {
+            color: white;
+        }
+
+        .nav-pills>li.active>a {
+            background-color: transparent;
+        }
+
+        .nav>li>a:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .nav>li>a:focus {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .active>a {
+            height: 42px;
+            border-right: 1px solid white;
+            border-radius: 0px !important;
+        }
+
+        .active>a:hover {
+            background-color: transparent !important;
+        }
+
+        .active>a:focus {
+            background-color: transparent !important;
+        }
+
+        .active>a:visited {
+            background-color: transparent !important;
+        }
+
+        .glyphicon-home {
+            display: block;
+            color: white;
+            position: absolute;
+            left: 15px;
+            top: -2px;
+            margin-right: 12px;
+            margin-top: 15px;
+        }
+
+        .diandiandian>a {
+            height: 42px;
+            width: 50px;
+            font-size: 30px;
+            color: white;
+            margin-top: 8px;
+            padding-left: 24px;
+            line-height: 26px;
+            position: absolute;
+            right: 0px;
+            top: -8px;
+            cursor: pointer;
+            background-image: linear-gradient(to right, rgba(95, 167, 15, 0) 0%, rgba(95, 167, 15, 1) 50%, rgba(95, 167, 15, 1) 100%);
+            z-index: 1;
+            text-decoration: none;
+            color: white;
+        }
+
+        .daohang-hidden {
+            overflow: hidden;
+            width: auto;
+            height: 42px;
+            flex-shrink: 1;
+        }
+
+        .daohang-hidden>ul {
+            overflow: hidden;
+            width: 99999999px;
+            height: 42px;
+        }
+
+        #logo-tu {
+            width: 100px;
+            height: 50px;
+            background-image: url("/imgs/logo_mini-lemon.png") !important;
+            background-position: 337px 141px;
+            background-size: 190px 75px;
+        }
+        /*.navbar-default{
+          overflow: hidden;
+        }*/
+
+        #zhuangtai-kuang {
+            width: 210px;
+            height: 41px;
+            position: absolute;
+            right: 0px;
+        }
+
+        #zhuangtai-kuang>div {
+            width: 50px;
+            height: 41px;
+            float: left;
+            margin-left: 2px;
+            margin-top: 5px;
+            /*background-color: green;*/
+            position: relative;
+        }
+
+        .touxiang>div {
+            width: 34px;
+            height: 34px;
+            position: relative;
+            left: 20px;
+            border-radius: 17px !important;
+        }
+
+        .touxiang>div>button {
+            width: 34px;
+            height: 34px;
+            border-radius: 17px !important;
+            background-image: url("./timg.jpg") !important;
+            background-position: center;
+            background-size: 34px 34px;
+        }
+
+        .touxiang>div:focus {
+            border-radius: 17px !important;
+            outline-style: none;
+            outline-width: 0px;
+            outline-color: transparent;
+        }
+
+        .sixing>div {
+            position: absolute;
+            right: -5px;
+        }
+
+        .tixing>div {
+            position: absolute;
+            right: 0px;
+        }
+
+        .dropdown-yemian {
+            width: 250px;
+        }
+        .text-zhanwei {
+            width: 250px;
+            height: 180px;
+        }
+
+        .tixing-more {
+            text-align: right;
+        }
+
+        .tixing-nav {
+            margin-left: 2px;
+        }
+
+        .tixing-nav>li:nth-child(1) {
+            border-bottom: 2px solid #5FA70F;
+        }
+
+        .tixing-nav>li>a {
+            color: black !important;
+            width: 80px !important;
+            text-align: center;
+        }
+
+        .text-zan {
+            display: none;
+        }
+
+        .text-ren {
+            display: none;
+        }
+        .dropdown-menu-sixing{
+          width: 250px;
+          height: auto;
+        }
+
+
+        @media (max-width: 255px) {
+            #logo-tu {
+                display: none;
+            }
+            .glyphicon-pencil {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .glyphicon {
+                display: block;
+            }
+            .denglu {
+                display: block;
+            }
+            #denglu {
+                display: none;
+            }
+            #navbar-form {
+                display: none;
+            }
+            #zhuangtai-kuang{
+              display: none;
+            }
+        }
+
+        @media (min-width: 767px) and (max-width: 970px) {
+            #navbar-form {
+                display: none;
+            }
+        }
+
+        @media (min-width: 970px) and (max-width: 1170px) {}
+
+        @media (min-width: 1170px) {
+            .biaoqian-daohang {
+                width: 1170px;
+            }
+            .top-daohang {
+                width: 1150px;
+            }
+            .logo-daohang {
+                width: 1170px;
+                margin: auto;
+            }
+        }

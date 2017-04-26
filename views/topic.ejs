@@ -6,9 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/index.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="/css/topic.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="/css/head.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="http://at.alicdn.com/t/font_mvwktzos7lrqkt9.css" media="screen" title="no title" charset="utf-8">
-  <title>主页-乐于分享-Mini Lemon</title>
+  <title>Mini Lemon</title>
 </head>
 <body>
   <%- include('head') -%>
@@ -16,64 +17,85 @@
     <div class="row">
     <!--　左边　-->
         <div class="left-box col-lg-9 col-md-9 col-sm-12 col-xs-12">
+          <div class="tag-introduce">
+              <div class="tag-title">
+                <i class="tag-icon iconfont icon-JS"></i>
+                <h2>Javascript</h2>
+                <a class="focused btn btn-sm">关注</a>
+              </div>
+              <div class="tag-content">
+                <p>JavaScript 是一门弱类型的动态脚本语言，支持多种编程范式，包括面向对象和函数式编程，被广泛用于 web 开发。 一般来说，完整的JavaScript包括以下几个部分： ECMAScript，描述了该语言的语法和基本对象 文档对...<a href="">[ 百科 ]</a></p>
+              </div>
+          </div>
             <ul class="tabs clearfix">
-              <li><a href="#">最新动态</a></li>
-              <li class="<%= page=='questions'||page=='index'?'active':'' %>" ><a href="/questions">最新问答</a></li>
-              <li class="<%= page=='hottest'?'active':'' %>" ><a href="/questions/hottest">热门问答</a></li>
-              <li class="<%= page=='unanswer'?'active':'' %>" ><a href="/questions/unanswer">等待回答</a></li>
+              <li class="active"><a href="#">问答</a></li>
+              <li><a href="#">文章</a></li>
+              <li><a href="#">百科</a></li>
             </ul>
             <div class="question-list">
-              <% issues.forEach(function(cur){ %>
-                <section class="question-item clearfix row">
-                  <div class="item-left text-center col-lg-3 col-md-3 col-sm-3 col-xs-2">
-                    <div class="<%= cur.votes>20?'big-num':'' %> votes hidden-xs"><%= cur.votes %><small>得票</small></div>
-                    <div class="<%= cur.answers == 0?'noanswers':'answers' %>"><%= cur.answers %><small>回答</small></div>
-                    <div class="<%= cur.scans>20?'big-num':'' %> scans hidden-xs"><%= cur.scans %><small>浏览</small></div>
+              <section class="question-item clearfix row">
+                <div class="item-left text-center col-lg-3 col-md-3 col-sm-3 col-xs-2">
+                  <div class="votes hidden-xs">10<small>得票</small></div>
+                  <div class="answers">15<small>回答</small></div>
+                  <div class="big-num scans hidden-xs">20<small>浏览</small></div>
+                </div>
+                <div class="item-right col-lg-9 col-md-9 col-sm-9 col-xs-10">
+                  <div class="author">
+                    <span><a href="#">小胖子</a></span>
+                    <span class="sep"></span>
+                    <span>10分钟前提问</span>
                   </div>
-                  <div class="item-right col-lg-9 col-md-9 col-sm-9 col-xs-10">
-                    <div class="author">
-                      <span><a href="/u/<%= cur.puber[0] %>"><%= cur.puber[1] %></a></span>
-                      <span class="sep"></span>
-                      <span id="<% cur.ansuser.length==0?'ask-time':'ans-time' %>"><%= cur.ltime %></span>
-                    </div>
-                    <h2 class="title"><a href="/q/<%= cur._id %>"><%= cur.title %></a></h2>
-                    <ul class="taglist">
-                      <% cur.tags.forEach(function(tag){ %>
-                        <li><a href="/t/<%= tag %>"><%= tag %></a></li>
-                      <% }) %>
-                    </ul>
+                  <h2 class="title"><a href="#">无法执行该操作，因为链接服务器 "***" 的 OLE DB 访问接口 "SQLNCLI" 无法启动分布式事务。解决方法？</a></h2>
+                  <ul class="taglist">
+                    <li><a href="#">php</a></li>
+                    <li><a href="#">javascript</a></li>
+                    <li><a href="#">css</a></li>
+                    <li><a href="#">nodejs</a></li>
+                  </ul>
+                </div>
+              </section>
+              <section class="question-item clearfix row">
+                <div class="item-left text-center col-lg-3 col-md-3 col-sm-3 col-xs-2">
+                  <div class="votes hidden-xs">10<small>得票</small></div>
+                  <div class="noanswers">0<small>回答</small></div>
+                  <div class="scans hidden-xs">20<small>浏览</small></div>
+                </div>
+                <div class="item-right col-lg-9 col-md-9 col-sm-9 col-xs-10">
+                  <div class="author">
+                    <span><a href="#">小胖子</a></span>
+                    <span class="sep"></span>
+                    <span>10分钟前提问</span>
                   </div>
-                </section>
-              <% }) %>
+                  <h2 class="title"><a href="#">无法执行该操作，因为链接服务器 "***" 的 OLE DB 访问接口 "SQLNCLI" 无法启动分布式事务。解决方法？</a></h2>
+                  <ul class="taglist">
+                    <li><a href="#">php</a></li>
+                    <li><a href="#">javascript</a></li>
+                    <li><a href="#">css</a></li>
+                    <li><a href="#">nodejs</a></li>
+                  </ul>
+                </div>
+              </section>
             </div>
             <div class="row text-center">
-              <% if(page=='index'){ %>
-                <p class="index-page">以上是部分更新，你还可以查看<a href="/questions">全部问题</a>或者<a href="/questions/hottest">热门问题</a>列表</p>
-              <% }else{ %>
-                <nav class="page">
-                  <ul id="pager" class="pager">
-                    <% for(var i=1;i<=count;i++){ %>
-                        <% if(current!=1){ %>
-                          <li>
-                            <a href="/questions<%= page=='questions'?'?page='+i:'/'+page+'?page='+i %>" aria-label="Previous">
-                              <span aria-hidden="true">&laquo;</span>
-                            </a>
-                          </li>
-                        <% } %>
-                        <% if(current==i){ %>
-                          <li class="liactive"><a href="javascript:void(0);"><%= i %></a></li>
-                        <% }else{ %>
-                          <li><a href="/questions<%= page=='questions'?'?page='+i:'/'+page+'?page='+i %>"><%= i %></a></li>
-                        <% } %>
-                    <% } %>
-                    <li>
-                      <a href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              <% } %>
+              <nav class="page">
+                <ul class="pager">
+                  <li>
+                    <a href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="liactive"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li>
+                    <a href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
         </div>
         <!-- 右边　-->
@@ -119,6 +141,18 @@
                 </ul>
               </div>
             </div>
+            <div class="relate-tags">
+              <div class="panel-heading">
+                <span>相关标签</span>
+              </div>
+              <div class="panel-body">
+                <a href="#">javascript</a>
+                <a href="#">html</a>
+                <a href="#">css</a>
+                <a href="#">nodejs</a>
+                <a href="#">nodejs</a>
+              </div>
+            </div>
             <div class="rank">
               <div class="panel-heading">
                 <span>排行榜</span>
@@ -137,8 +171,5 @@
     </div>
   </div>
   <div class="to-top hidden-sm">回到顶部</div>
-<script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
-<script src="/js/index.js"></script>
-<script src="/js/head.js"></script>
 </body>
 </html>

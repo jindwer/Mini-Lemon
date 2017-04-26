@@ -1,0 +1,57 @@
+.tag-introduce{
+  margin-top:20px;
+  padding:15px;
+  background:#fcf8e3;
+  border-radius: 5px;
+}
+.tag-title .tag-icon{
+  font-size: 2.5em;
+  color:#FAC552;
+  margin-right:15px;
+}
+.tag-title h2{
+  display: inline;
+  font-size:1.5em;
+}
+.tag-title a{
+  padding:0 5px 0 5px;
+  background:#fff;
+  color:#4BB45B;
+  margin-left:20px;
+  font-size:1.1em;
+  border:1px solid #4BB45B;
+  font-weight: bold;
+  line-height:1.3;
+}
+.tag-title a:hover{
+  background:#4BB45B;
+  color:#fff;
+}
+.tag-title a.focused{
+  background:#4BB45B;
+  color:#fff;
+}
+.tag-content{
+  padding-top:10px;
+}
+.tag-content a{
+  color:#4BB45B;
+}
+.relate-tags .panel-heading{
+  border-top:2px solid #ddd;
+  padding-top:30px;
+}
+.relate-tags .panel-body a{
+  display: inline-block;
+  padding:2px 7px;
+  color:#4BB45B;
+  background:#EBF5F3;
+  margin-bottom:10px;
+  margin-right:6px;
+  border-radius:5px;
+}
+.relate-tags .panel-body a:hover{
+  color:#EBF5F3;
+  background:#4BB45B;
+  text-decoration: none;
+}

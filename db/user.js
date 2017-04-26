@@ -11,6 +11,7 @@ var UserSchema = new Schema({
     focus:{type:String,default:0},
     actives:{type:Number,default:1},
     focuslist:{type:Array,default:[]},
+    tagfocuslist:{type:Array,default:[]},
     bads:{type:Number,default:0},
     issuesf:{type:Array,default:[]},
     issuesc:{type:Array,default:[]},

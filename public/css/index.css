@@ -1,5 +1,6 @@
 .left-box,.right-box{
   padding:0;
+  padding-top:20px;
 }
 .tabs{
   padding:0px;
@@ -22,7 +23,7 @@
 }
 .tabs li a{
   text-decoration: none;
-  font-size:1em;
+  font-size:1.2em;
   color:#333;
   font-weight:700;
 }
@@ -39,7 +40,7 @@
 .question-item a{
   text-decoration: none;
   cursor: pointer;
-  color:#333;
+  color:#999;
 }
 .question-item a:hover{
   text-decoration: underline;
@@ -79,7 +80,7 @@
 }
 .author span{
   display: inline-block;
-  color:#333;
+  color:#999;
   margin-bottom:8px;
 }
 .author .sep{
@@ -92,6 +93,9 @@
 .title{
   display: inline;
   font-size:1.2em;
+}
+.title a{
+  color:#333;
 }
 @media screen and (max-width:768px) {
   .title{
@@ -167,7 +171,8 @@
 }
 .task{
   margin-top:20px;
-  margin-left:15px;
+  margin-left:10px;
+  margin-right:10px;
   margin-bottom:30px;
   border:1px solid #4BB45B;
 }
@@ -204,6 +209,7 @@
 }
 .task ul li i.done + span{
   color:#4BB45B;
+  text-decoration: line-through;
 }
 .rank .panel-heading{
   border-top:2px solid #ddd;
@@ -226,15 +232,15 @@
   color:#4BB45B;
   cursor: pointer;
 }
-.page li a{
+#pager li a{
   color:#4BB45B;
   border-color:#4BB45B;
 }
-.page li a:hover{
+#pager li a:hover{
   background:#4BB45B;
   color:#fff;
 }
-.page li.active a{
+#pager li.liactive a{
   background:#4BB45B;
   color:#fff;
 }
@@ -257,4 +263,22 @@
 .to-top:hover{
   background:#4BB45B;
   color:#fff;
+}
+.index-page{
+  margin-top:50px;
+}
+.index-page a{
+  display: inline-block;
+  padding:5px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  color:#4BB45B;
+  font-weight:bold;
+  margin-left:5px;
+  margin-right:5px;
+}
+.index-page a:hover{
+  background:#4BB45B;
+  color:#fff;
+  text-decoration: none;
 }
