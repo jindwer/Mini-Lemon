@@ -89,6 +89,8 @@
 | 记录ID | _id | ObjectId | 是 |  | 数据库自动生成 | 
 | 标签名 | tag | String | 是 |  | 如javascript |
 | 标签属性 | tagtags | Array | 否 | [] | ['前端开发','javascript开发'] |
+| 关注量 | focus | Number | 否 | 0 |  |
+| 描述 | des | String | 否 | "" |  |
 
 ***
 ## Pages(页面)
