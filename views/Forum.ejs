@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/Forum.css" media="screen" title="no title" charset="utf-8">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="top">
+      <h1>Mini Lemon 讨论板
+      <span class="hidden-xs hidden-sm">
+      讨论和社区建设相关等一切话题
+    </span>
+    <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs header">
+      <a href="#">兰丰浩 </a>| <a href="#">退出 </a>| <a href="#">回主站</a>
+    </div>
+      </h1>
+
+      <div class="new hidden-xs" >
+        <button class="btn btn-warning found" type="button" name="button"><i class="glyphicon glyphicon-plus"></i>创建新贴</button>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="hidden-xs left">
+        <div class="Label">
+          <!-- <h2>所有标签	&nbsp;<i class="glyphicon glyphicon-comment col1"></i></h2> -->
+          <ul>
+            <li>建议反馈	&nbsp;<i class="glyphicon glyphicon-comment col2"></i> </li>
+            <li>bug	&nbsp;<i class="glyphicon glyphicon-comment col3"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="body">
+        <div class="body_top">
+          <div class="row caidan">
+            <div class="col-lg-6 col-sm-6">
+              <a href="#" class="btn btn-default btn-xs active"><i class="glyphicon glyphicon-question-sign"></i> 666 进行中</a>
+              <a href="#" class="btn btn-default btn-xs active"><i class="glyphicon glyphicon-ok"></i> 666 已完成</a>
+            </div>
+            <div class="col-lg-6 col-sm-6 text-right">
+              <button class="btn btn-default  btn-xs dropdown-toggle" type="button" name="button">排序:更新时间 <i class="glyphicon glyphicon-chevron-down"></i></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a href="#">按更新时间</a></li>
+                <li><a href="#">按创建时间</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <ul class="body_content">
+
+        </ul>
+        <ul class="page">
+          <!-- page -->
+          <!-- <li>《</li> -->
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>…</li>
+          <li>》</li>
+        </ul>
+      </div>
+    </div>
+  <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $(".Label h2").click(function() {
+        // console.log("aaa");
+        $(this).css({"backgroundColor":"rgba(255, 255, 255, 0.5)","border":"10px #fff solid","border-right":"none","border-radius": "5px",});
+        $(".Label ul li").css({"backgroundColor":"#efefef","border":"10px #efefef solid"});
+      });
+
+      $(".Label ul li").eq(0).click(function() {
+        // console.log("bbb");
+        $(this).css({"backgroundColor":"rgba(255, 255, 255, 0.5)","border":"10px #fff solid","border-right":"none","border-radius": "5px",});
+        $(".Label ul li").eq(1).css({"backgroundColor":"#efefef","border":"10px #efefef solid"});
+        $(".Label h2").css({"backgroundColor":"#efefef","border":"10px #efefef solid"});
+      });
+
+      $(".Label ul li").eq(1).click(function() {
+        // console.log("ccc");
+        $(this).css({"backgroundColor":"rgba(255, 255, 255, 0.5)","border":"10px #fff solid","border-right":"none","border-radius": "5px",});
+        $(".Label ul li").eq(0).css({"backgroundColor":"#efefef","border":"10px #efefef solid"});
+        $(".Label h2").css({"backgroundColor":"#efefef","border":"10px #efefef solid"});
+      });
+      $(".dropdown-toggle").click(function() {
+        $(".dropdown-menu-right").css({"display":"block"});
+      });
+      $(".dropdown-menu-right>li").click(function() {
+        $(".dropdown-menu-right").css({"display":"none"});
+      });
+      $(".dropdown-menu-right>li").eq(0).click(function() {
+        $(".dropdown-toggle").html('排序:更新时间 <i class="glyphicon glyphicon-chevron-down"></i>')
+      });
+      $(".dropdown-menu-right>li").eq(1).click(function() {
+        $(".dropdown-toggle").html('排序:创建时间 <i class="glyphicon glyphicon-chevron-down"></i>')
+      });
+      $(".page li").click(function() {
+        $(this).css({"background": "#5fa70f","color":"#fff"});
+        $(this).siblings().css({"background": "#fff","color":"#5fa70f"});
+
+      })
+
+      var jian = '<li><div class="topic"><h3><i class="glyphicon glyphicon-question-sign col4"></i>&nbsp;手机号码解绑&nbsp;<span>建议反馈</span><div class="qipao"><i class="glyphicon glyphicon-comment col1"></i>&nbsp;&nbsp;1</div></h3><p>#2122 发布于 21 小时前 · 来自 qzuser_57a2076b1ba66</p></div></li>';
+      var bug = '<li><div class="topic"><h3><i class="glyphicon glyphicon-question-sign col4"></i>&nbsp;手机号码解绑&nbsp;<span class="bug_col">bug</span><div class="qipao"><i class="glyphicon glyphicon-comment col1"></i>&nbsp;&nbsp;1</div></h3><p>#2122 发布于 21 小时前 · 来自 qzuser_57a2076b1ba66</p></div></li>';
+      var jian_ok = '<li><div class="topic"><h3><i class="glyphicon glyphicon-ok col"></i>&nbsp;手机号码解绑&nbsp;<span>建议反馈</span><div class="qipao"><i class="glyphicon glyphicon-comment col1"></i>&nbsp;&nbsp;1</div></h3><p>#2122 发布于 21 小时前 · 来自 qzuser_57a2076b1ba66</p></div></li>';
+      var bug_ok = '<li><div class="topic"><h3><i class="glyphicon glyphicon-ok col"></i>&nbsp;手机号码解绑&nbsp;<span class="bug_col">bug</span><div class="qipao"><i class="glyphicon glyphicon-comment col1"></i>&nbsp;&nbsp;1</div></h3><p>#2122 发布于 21 小时前 · 来自 qzuser_57a2076b1ba66</p></div></li>';
+      for (var i = 0; i < 25; i++) {
+        $(".body>.body_content").append(jian)
+      };
+
+      $(".caidan>div>a").eq(1).click(function() {
+        $(".body>.body_content").html('');
+        for (var i = 0; i < 25; i++) {
+          $(".body>.body_content").append(jian_ok)
+        };
+      })
+
+      $(".caidan>div>a").eq(0).click(function() {
+        $(".body>.body_content").html('');
+        for (var i = 0; i < 25; i++) {
+          $(".body>.body_content").append(jian)
+        };
+      })
+
+      $(".Label ul li").eq(0).click(function() {
+
+        $(".body>.body_content").html('');
+        for (var i = 0; i < 25; i++) {
+          $(".body>.body_content").append(jian)
+        };
+        jianyi();
+      })
+
+      $(".Label ul li").eq(1).click(function() {
+        $(".body>.body_content").html('');
+        for (var i = 0; i < 25; i++) {
+          $(".body>.body_content").append(bug)
+        };
+        bugin();
+      });
+
+
+    function bugin() {
+      $(".caidan>div>a").eq(1).click(function() {
+        $(".body>.body_content").html('');
+        for (var i = 0; i < 25; i++) {
+          $(".body>.body_content").append(bug_ok)
+        };
+      })
+
+      $(".caidan>div>a").eq(0).click(function() {
+        $(".body>.body_content").html('');
+        for (var i = 0; i < 25; i++) {
+          $(".body>.body_content").append(bug)
+        };
+      })
+    }
+
+    function jianyi() {
+      $(".caidan>div>a").eq(1).click(function() {
+        $(".body>.body_content").html('');
+        for (var i = 0; i < 25; i++) {
+          $(".body>.body_content").append(jian_ok)
+        };
+      })
+
+      $(".caidan>div>a").eq(0).click(function() {
+        $(".body>.body_content").html('');
+        for (var i = 0; i < 25; i++) {
+          $(".body>.body_content").append(jian)
+        };
+      })
+    }
+    });
+  </script>
+  </body>
+</html>

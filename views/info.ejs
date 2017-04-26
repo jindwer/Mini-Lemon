@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>info</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/info.css" media="screen" title="no title" charset="utf-8">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/info.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="top">
+      top
+    </div>
+    <div class="info_banner well row">
+      <div class="container">
+        <div class="info_portrait col-lg-3 col-md-4 col-sm-5 col-xs-6">
+          <div class="portrait">
+            <input type="file" name="name" value="上传头像" class="file_portrait file_hid">
+            <div class="file_portrait_div file_hid">上传头像</div>
+          </div>
+          <p>
+            <!-- <%= name %> -->
+            name
+          </p>
+        </div>
+        <div class="info_file col-lg-9 col-md-8 col-sm-7 col-xs-6 hidden-xs">
+          <h2 class="info_title">
+            个人信息
+          </h2>
+          <div class="see_file">
+            <a href="#">查看完整档案</a>
+            <span>&nbsp;|&nbsp;</span>
+            <a href="#" class="bianjixinxi"><i class="glyphicon glyphicon-pencil"></i>编辑信息</a>
+          </div>
+          <div class="write_info">
+            <div class="prestige">
+            <!-- <%= prestige %> -->
+            100
+            声望
+            </div>
+            <i class="glyphicon glyphicon-heart"></i>
+            <!-- <%= follow %> -->99
+            <i class="glyphicon glyphicon-star"></i>
+            <!-- <%= Collection %> -->99
+            <i class="glyphicon glyphicon-thumbs-up"></i>
+            <!-- <%= Praise %> -->99
+            <br>
+            <i class="glyphicon glyphicon-map-marker"></i><span>
+              <!-- <%= address %> -->address
+            </span>
+            <br>
+            <i class="glyphicon glyphicon-education"></i><span>
+              <!-- <%= School %> -->School
+            </span>
+            <br>
+            <i class="glyphicon glyphicon-briefcase"></i><span>
+              <!-- <%= company %> -->company
+            </span>
+            <br>
+            <i class="glyphicon glyphicon-globe"></i><span>
+              <!-- <%= Website %> -->Website
+            </span>
+            <form class="info_edit" action="info" method="post">
+              <input type="text" name="address" value="" class="form-control" placeholder="住址"><br>
+              <input type="text" name="School" value="" class="form-control" placeholder="毕业学校"><br>
+              <input type="text" name="company" value="" class="form-control" placeholder="所在公司"><br>
+              <input type="text" name="Website" value="" class="form-control" placeholder="个人网址">
+              <input type="submit" name="sub" value="保存" class="btn btn-success edit_sub">
+            </form>
+          </div>
+
+          <div class="info_summary visible-lg-block">
+            <div class="jianjie">
+              <span>简介</span>
+              <a><i class="glyphicon glyphicon-pencil"></i>编辑简介</a>
+              <p>
+              <%= jianjie %>
+              <form class="jianjie_form" action="info" method="post">
+                <textarea name="jianjie" rows="8" cols="39" class="form-control jianjie_edit"></textarea>
+                <input type="submit" name="sub" value="保存" class="btn btn-success jianjie_sub">
+              </form>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="container ">
+      <div class="row">
+        <div class="leftSidebar col-lg-3 col-md-3 col-sm-6 col-xs-6">
+          <div class="hemo">
+            <ul>
+              <li>我的主页</li>
+              <li>我的回答</li>
+              <li>我的提问</li>
+              <li>我的文章</li>
+              <li>我的讲座</li>
+              <li>我的笔记</li>
+              <li>我的分享</li>
+              <li>我的收藏夹</li>
+              <hr>
+              <li>个人动态</li>
+              <li>我关注的</li>
+              <li>标签得分</li>
+              <li>获得徽章</li>
+              <li>声望记录</li>
+              <li>浏览记录</li>
+            </ul>
+          </div>
+        </div>
+      <div class="max-box">
+        <div class="body bodyundefined col-lg-6 col-md-6 col-sm-6 col-xs-6"> <span>
+        <div class="homepage">
+          <p>
+            个人动态
+          </p>
+        </div>
+        <div class="homepage">
+          <p>
+            个人社区
+          </p>
+        </div>
+        <div class="homepage">
+          <p>
+            最近提问
+          </p>
+        </div>
+        </span></div>
+
+    </div>
+        <div class="right_info col-lg-3 col-md-3 hidden-sm hidden-xs">
+          <div class="skill">
+            <p>
+              擅长技能
+            </p>
+            <span><%= skill %></span>
+          </div>
+          <div class="project">
+            <p>
+              开发项目&著作
+            </p>
+            <span><%= project %></span>
+          </div>
+          <div class="share">
+             <p>
+              我的分享
+             </p>
+          </div>
+
+          <div class="Interest">
+            <p>
+            我的兴趣
+            </p>
+          </div>
+
+          <div class="Footprints">
+            <p>
+            我的足跡
+            </p>
+          </div>
+        </div>
+    </div>
+
+  </div>
+  <div class="footer">
+    <hr>
+    footer
+  </div>
+  <script type="text/javascript">
+    $(function() {
+      for (var i = 0; i < 14; i++) {
+        // console.log(i);
+        $('.max-box>.bodyundefined').css({'display': 'inline-block'});
+
+        $('.hemo ul li:eq('+i+')').click(function() {
+          var inx = $($('.hemo ul li').index(this))[0];
+          // console.log(inx);
+        $('.max-box>.body'+inx+'').css({'display': 'inline-block'});
+        $('.max-box>.body'+inx+'').siblings().css({'display': 'none'});
+        });
+      };
+    });
+  </script>
+
+  </body>
+</html>
