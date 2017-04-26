@@ -87,8 +87,8 @@
 | 中文 | 英文 | 类型 | 是否必填 | 默认值 | 备注 | 
 |------|------|------|-------|------|------|
 | 记录ID | _id | ObjectId | 是 |  | 数据库自动生成 | 
-| 父标签 | ptag | String | 是 |  |  |
-| 子标签 | ctag | Object | 是 | {} | {'php':{focus:33,des:"werfsf"}} |
+| 标签名 | tag | String | 是 |  | 如javascript |
+| 标签属性 | tagtags | Array | 否 | [] | ['前端开发','javascript开发'] |
 
 ***
 ## Pages(页面)
