@@ -28,9 +28,8 @@
 | 关注的问题 | issuesf | Array | 否 | [] | 问题的_id | 
 | 收藏的问题 | issuesc | Array | 否 | [] | 问题的_id |
 | 回答过的问题 | issuesr | Array | 否 | [] | 问题的_id |
-| 个人信息 | info | Object | 否 | {} |  | 
-| 主页浏览次数 | infotimes | Number | 否 | 0 |  |
-| 主页描述 | infodes | String | 否 | "" |  | 
+| 个人信息 | info | Object | 否 | {} | {address:,school:,company:,website:,des:''} | 
+| 主页浏览次数 | times | Number | 否 | 0 |  |
 | 奖章 | badge | Array | 否 | [] |  | 
 | 参与社区互动 | bbs | Object | 否 | {} | 如:{php:3} |
 | 创建时间 | ctime | Date | 是 |  | 在注册成功时写入 |
